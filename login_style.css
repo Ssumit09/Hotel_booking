@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(lg_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top:100px;
+}
+
+.login {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 40px;
+  width: 500px;
+}
+
+h1 {
+  color: #8ac40e;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h6{
+  color:#8c8585;
+  margin-left:30px;
+}
+
+span {
+  color: #8c8585;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 29px;
+  text-align: center;
+}
+input {
+  border-style: none; /*for removing border*/
+}
+
+input[type="text"],
+input[type="password"] ,input[type="email"]{
+  background-color: transparent;
+  /*for removing backgrouond color of text box*/
+  border-style: none;
+  /*For removing box of input field*/
+  border-radius: none;
+  color: #0d0707;
+  font-size: 23px;
+  padding: 10px;
+  width: 80%;
+}
+
+input:focus {
+  outline: none;
+}
+input::placeholder{
+  font-size:16px;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.input-username,
+.input-password i {
+  font-size: 20px;
+}
+
+hr {
+  background-color: #ddd;
+  border: none;
+  height: 1px;
+  margin: 8px 0;
+}
+
+button {
+  background: #65cb39;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  /* cursor: pointer; */
+  font-size: 26px;
+  padding: 10px;
+  width: 100%;
+}
+
+.login-button {
+  padding-top: 20px;
+}
+
+button:hover {
+  /* background-color: #60c508; */
+  transform: scale(1.05);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.icons i {
+  font-size: 22px;
+  margin: 6px;
+  /* transition: all 0.2s ease-in-out; */
+}
+
+.fa-facebook:hover {
+  color: #1877f2;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.fa-google:hover {
+  color: #e50a0a;
+}
+
+.sign-up {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sign-up a:hover {
+  color: #c5650b;
+  font-size: larger;
+}

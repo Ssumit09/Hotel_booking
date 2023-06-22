@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/project/offer.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Offer page</title>
+  <link rel="stylesheet" href="header.css">
+  <script src="https://kit.fontawesome.com/220cf49541.js"></script>
+  <style>
+  main {
+    height: 100%;
+    min-height: calc(100% - 50px); /* Subtract footer height */
+    padding-bottom: 50px; /* Add bottom padding equivalent to footer height */
+  }
+  body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+section.offers {
+  padding: 50px;
+  color: #333;
+}
+
+.offer {
+  margin-bottom: 30px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  width: 964.8px;
+  height: 439.4px;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer:nth-child(even) .offer-image {
+  order: 2;
+}
+
+.offer:nth-child(even) .offer-details {
+  order: 1;
+  }
+  
+.offer-image {
+  width: 60%;
+  height: 439.4px;
+  order: 1;
+  flex-shrink: 0;
+  }
+  nav ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+  }
+
+
+.offer-details {
+  padding: 20px;
+  width: 502.4px;
+  height: 439.4px;
+  order: 2;
+  }
+
+.offer:hover {
+  filter: brightness(0.5); /* Apply filter on hover */
+}
+
+
+.offer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.offer-image:hover img {
+  transform: scale(1.1);
+}
+
+
+
+.offer-details h3 {
+  margin: 0;
+}
+
+.offer-details p {
+  margin-top: 10px;
+}
+  
+.offer-details ul {
+  padding-left: 20px;
+}
+
+.offer-details li {
+  margin-bottom: 5px;
+}
+
+.offer-details .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0d4cf9;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.know-more {
+  background-color: #008cba;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+</style>
+ 
+</head>
+<body data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+
+  <div class="div1">
+    <a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    <p class="p1">|</p>
+    <a href="contact_us.html">Contact us</a>
+    <p class="p1">|</p>
+    <a href="Faq.html">FAQs</a>
+    <p class="p1">|</p>
+    <a href="booking.html">Booking</a>
+    <p class="p1">|</p>
+    <a href="indx _af_login.html">Home</a>
+  </div>
+
+
+  <section class="offers">
+    <div class="offer" data-offer-id="firstCustomers">
+      <div class="offer-image">
+        <img src="firstcustomer.jpg" alt="First Customers Offer">
+      </div>
+      <div class="offer-details">
+        <h3>First Customers Offer</h3>
+        <p>Enjoy exclusive benefits as our first customer. Experience luxury accommodations, personalized services, and special discounts on various amenities.</p>
+        <ul>
+          <li>Benefits:
+            <ul>
+              <li>Complimentary room upgrade (subject to availability).</li>
+              <li>Welcome drinks and snacks upon arrival.</li>
+              <li>20% off on spa and wellness services.</li>
+              <li>Access to exclusive lounge facilities.</li>
+            </ul>
+          </li>
+          <li>Booking Conditions: This offer is applicable to new customers only. Valid for a limited time.</li>
+        </ul>
+        <div class="price">$100.00</div>
+        <a href="booking.html" class="btn Book Now!">Book Now!</a>
+      </div>
+    </div>
+
+    <div class="offer" data-offer-id="weekendHolidays">
+      <div class="offer-image">
+        <img src="weekendholidays.png" alt="Weekend Holidays">
+      </div>
+      <div class="offer-details">
+        <h3>Weekend Holidays</h3>
+        <p>Escape the city and indulge in a relaxing weekend getaway. Enjoy luxurious accommodations, rejuvenating spa treatments, and delightful dining experiences.</p>
+        <ul>
+          <li>Inclusions:
+            <ul>
+              <li>2-night stay in a Deluxe Room.</li>
+              <li>Daily breakfast buffet.</li>
+              <li>Complimentary access to the hotel's wellness center.</li>
+              <li>20% off on all dining options.</li>
+            </ul>
+          </li>
+          <li>Booking Conditions: Offer valid for Friday and Saturday night stays. Subject to availability.</li>
+        </ul>
+        <div class="price">$200.00</div>
+        <a href="booking.html" class="btn Book Now!">Book Now!</a>
+      </div>
+    </div>
+
+    <div class="offer" data-offer-id="summerGetaways">
+      <div class="offer-image">
+        <img src="summergetaway.jpeg" alt="Summer Getaways">
+      </div>
+      <div class="offer-details">
+        <h3>Summer Getaways</h3>
+        <p>Experience the ultimate summer escape with our exclusive Summer Getaways offer. Enjoy the sun, sand, and luxury amenities at our beachfront resort.</p>
+        <ul>
+          <li>Inclusions:
+            <ul>
+                <li>Customized international travel package.</li>
+                <li>Luxury accommodations in renowned hotels.</li>
+                <li>Guided tours and cultural activities.</li>
+                <li>Exclusive access to premium amenities.</li>
+              </ul>
+            </li>
+            <li>Booking Conditions: Offer subject to destination availability and travel restrictions.</li>
+          </ul>
+          <div class="price">$300.00</div>
+          <a href="booking.html" class="btn Book Now!">Book Now!</a>
+        </div>
+      </div>
+  
+      <div class="offer" data-offer-id="weddings">
+        <div class="offer-image">
+          <img src="weedings.jpeg" alt="Weddings">
+        </div>
+        <div class="offer-details">
+          <h3>Weddings &amp; Events</h3>
+          <p>Celebrate your special day in elegance and style. Our dedicated event planners will ensure your wedding or special event is a truly memorable experience.</p>
+          <ul>
+            <li>Services:
+              <ul>
+                <li>Customized wedding packages.</li>
+                <li>Event coordination and planning.</li>
+                <li>Elegant venues and exquisite catering.</li>
+                <li>Professional photography and videography.</li>
+              </ul>
+            </li>
+            <li>Booking Conditions: Available for weddings and events of all sizes. Advanced booking required.</li>
+          </ul>
+          <div class="price">$400.00</div>
+          <a href="booking.html" class="btn Book Now!">Book Now!</a>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <p>© 2023 Everest Hotel . All rights reserved.
+        Made and Developed by Srujan
+      </p>
+    </footer>
+  
+    <script>
+        // Get all the offer elements
+const offers = document.querySelectorAll('.offer');
+
+// Define the new prices
+const newPrices = ['$100.00', '$200.00', '$300.00', '$400.00'];
+
+// Loop through each offer and update the price
+offers.forEach((offer, index) => {
+  const priceElement = offer.querySelector('.price');
+  priceElement.textContent = newPrices[index];
+});
+
+    </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+  
+  </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

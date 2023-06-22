@@ -1,0 +1,606 @@
+<html>
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+
+            /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+        }
+        body{
+            width:100%;
+        }
+
+        .div1 {
+            width: 100%;
+            background-color: rgb(216, 194, 194);
+            height: 49px;
+            margin-top:-49px;
+            position:fixed;
+        }
+
+        .p1 {
+            color: #4A4A4A;
+            text-decoration: solid;
+            font-weight: lighter;
+            font-size: 25px;
+            text-decoration: none;
+            float: right;
+            margin-right: 23px;
+            margin-left: 0px;
+            margin-top: 8px;
+
+        }
+
+        div a {
+            color: black;
+            padding-top: 13px;
+            font-size: 20px;
+            text-decoration: none;
+            letter-spacing: 0.1px;
+            float: right;
+            margin-right: 23px;
+        }
+
+        .div1 a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .image {
+            background-image: url('image.jpg');
+            background-repeat: no-repeat;
+            margin-top:49px;
+
+            background-size: 100%;
+            width: 1517px;
+            /* margin: 0px; */
+            height: 90vh;
+            border: 1px solid white;
+            cursor: pointer;
+
+        }
+
+        .logo {
+            width: 70px;
+            height: 50px;
+            padding-bottom: 5px;
+            margin: 20px;
+            padding-top: 0px;
+            border: 2px solid #F7EF8A;
+            font-size: 50px;
+            align-items: center;
+            color: #F7EF8A;
+
+        }
+
+        .tagline {
+            width: 420px;
+            height: 50px;
+            float: left;
+            margin-left: 580px;
+            margin-top: -30px;
+
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bolder;
+            color: #943a3a;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .tagline1 {
+            width: 100%;
+            height: 50px;
+            float: left;
+            margin-top: 530px;
+            margin-right: 500px;
+
+        }
+
+        .title1 {
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+
+
+        .lname {
+            float: left;
+            width: 10px;
+            height: 4px;
+            padding: -10px;
+            margin-top: -20px;
+            margin-left: 28px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            color: #F7EF8A;
+
+        }
+
+
+
+
+        /* Kitchen */
+
+        .kitchen #intro {
+            text-align: center;
+            font-size: 50px;
+            margin: 18px;
+        }
+
+         #sub2 {
+            text-align: center;
+            font-size: 18px;
+            color: #8d0003;
+            margin: 18px;
+        }
+
+        .foodbox {
+            display: flex;
+            margin: 12px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .foodbox .foodcolumn {
+            width: 325px;
+            height: 100px;
+            margin-left: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .foodcolumn .fooddescription {
+            color: #8d0003;
+            margin-left: 30px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 4px;
+            border: 1px solid black;
+            border-radius:7px;
+        }
+
+
+        .foodbox .foodcolumn img {
+            width: 95%;
+            padding: 20px;
+            border-radius: 35px;
+        }
+
+       
+
+
+
+        /* Rooms */
+
+        #main{
+            display:flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #rooms {
+            width: 80vw;
+        }
+
+        #rooms #roomintro {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 520px;
+
+        }
+
+        /* .rooms #rsum1,
+        #rsum2 {
+            text-align: center;
+            font-size: 18px;
+            margin: 18px;
+            color: #8d0003;
+        } */
+
+        /* .rooms #rsum2 {
+            font-size: 15px;
+            padding-bottom: 12px;
+        } */
+
+        .roomspic1 {
+            /* border: 2px solid red; */
+            background-color: rgb(215, 212, 212);
+            display: flex;
+            box-shadow: 2px 2px 10px black;
+            margin:15px 0;
+        }
+
+        .roomspic2 {
+            /* border: 2px solid red; */
+            background-color: whitesmoke;
+            display: flex;
+            margin:15px 0;
+            box-shadow: 2px 2px 10px ;
+
+        }
+
+        .roomspic1 img,
+        .roomspic2 img {
+            width: 40%;
+            padding: 30px;
+            /* border: 1px solid black; */
+        }
+
+        .rdesc {
+            flex-direction: column;
+            padding-top: 40px;
+            padding-left: 32px;
+            padding-right: 22px;
+            font-size: 18px;
+            /* border: 1px solid black; */
+        }
+
+        #room1,
+        #room3 {
+            flex-direction: row;
+        }
+
+        #room2,
+        #room4 {
+            flex-direction: row-reverse;
+        }
+
+        .roomtype {
+            font-size: 35px;
+            padding-bottom: 10px;
+        }
+
+        .buton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        button {
+            padding: 7px 75px;
+            background-color: #8d0003;
+            color: whitesmoke;
+            margin-top: 22px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: whitesmoke;
+            color: #8d0003;
+            font-weight: bold;
+        }
+
+
+        /* footer */
+        .lefrig {
+
+            display: flex;
+
+        }
+
+        .foot {
+            width: 1517px;
+            height: 450px;
+            /* border: 1px solid black; */
+            margin-top: 75px;
+            background-color: #453a26;
+
+        }
+
+        .leftfooter {
+            width: 50%;
+            /* display: flex; */
+            height: 370px;
+        }
+
+        .rightfooter {
+
+            flex-direction: row;
+            width: 50%;
+            height: 370px;
+            color: whitesmoke;
+
+            font-size: 19px;
+        }
+
+
+        .leftfooter .about,
+        .rightfooter .about {
+            font-size: 40px;
+            color: whitesmoke;
+            margin: 20px;
+            text-align: center;
+
+        }
+
+        .leftfooter .aboutus,
+        .rightfooter .aboutus {
+            font-size: 19px;
+            color: whitesmoke;
+            margin: 10px;
+            padding-left: 100px;
+            padding-right: 100px;
+            text-align: center;
+        }
+
+        .abtintro {
+            font-size: 20px;
+            color: whitesmoke;
+
+            margin-top: -15px;
+            text-align: center;
+
+
+
+        }
+
+
+
+        .bottombar {
+            width: 99.9%;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            color: whitesmoke;
+            padding-top: 25px;
+
+        }
+
+        #fform {
+            width: 90%;
+            margin-left: 40px;
+            margin-top: 20px;
+            height: 230px;
+            text-align: center;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="div1">
+        <a href="login.html">Log In / Sign Up</a>
+        <p class="p1">|</p>
+        <a href="contact_us.html">Contact Us</a>
+        <p class="p1">|</p>
+        <a href="Faq.html">FAQs</a>
+        <p class="p1">|</p>
+        <a href="#forroom">Our Rooms</a>
+        <p class="p1">|</p>
+        <a href="#forkitchen">Our Kitchen</a>
+        <p class="p1">|</p>
+        <a href="Offer page.html">Offers</a>
+        <p class="p1">|</p>
+        <a href="">Home</a>
+    </div>
+
+
+    <div class="image">
+        <div class="logo">EH</div>
+        <p class="lname">Everest<br>Hotel</p>
+        <div class="tagline">
+            <p class="title">Everest Hotel Welcomes You!</p>
+        </div>
+
+
+        <div class="tagline1">
+            <p id="forkitchen" class="title1">We are located at the heart of Bangalore city and
+                 we offer the best experience to our customers. Our hotel is spread across 3 acres of land,<br>and we have a spacious gym, a heated swimming pool and a spa serving at international standards for our customers.</p>
+        </div>
+
+
+    </div>
+
+
+    <br><br><br>
+
+
+    <div class="kitchen" id="kitchen">
+        <!-- <div id="sum1">What would you like us to prepare for you?</div> -->
+        <div id="intro">Our Kitchen</div>
+        <div id="sub2">
+            Taste the best from different States!
+            <!-- with the food that awaits you -->
+        </div>
+
+        <div class="foodbox">
+
+            <div class="foodcolumn">
+
+
+                <div><img title="Khandvi is a snack made with gram flour, sesame, mustard seeds, yogurt, green chillies and coconut. It is usually found in rolls and has a different and mild flavour." src="img1.jpg" alt="">
+                    <div class="fooddescription">Gujrat's Khandvi</div>
+                </div>
+
+
+
+                <div><img title="Ras malai consists of flattened balls of chhena soaked in malai flavoured with cardamom." src="img2.jpg" alt="">
+                    <div class="fooddescription">West Bengal's Rasmalai</div>
+                </div>
+            </div>
+
+
+            <div class="foodcolumn">
+
+                <div><img title="Thukpa is boiled noodles, filtered and mixed with vegetables and meat items." src="img3.jpg" alt="">
+                    <div class="fooddescription">Arunachal's Thukpa</div>
+                </div>
+
+
+                <div><img title="Vindaloo is a traditional tomato-based curry originated from Goa." src="img4.jpg" alt="">
+                    <div class="fooddescription">Goa's Vindaloo</div>
+                </div>
+            </div>
+
+
+            <div class="foodcolumn">
+
+                <div><img title="Goa's deliciously tangy fish curry made with special spices, served with steamed rice or roti." src="img5.jpg" alt="">
+                    <div class="fooddescription">
+                        Goa's Fish Curry
+                    </div>
+                </div>
+
+
+                <div><img title="It is partially cooked rice, layered over the marinated raw meat." src="img6.jpg" alt="">
+                    <div id="forroom" class="fooddescription">
+                        Hyderabadi Dum Biryani
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br><br>
+
+
+    <div id="main">
+
+        <div class="rooms" id="rooms">
+
+            <div id="roomintro">Our Rooms</div>
+            <div id="sub2">
+                Come stay with us!
+
+            </div>
+            <div class="roomspic1" id="room1"><img src="1.jpg">
+                <div class="rdesc">
+                    <div class="roomtype">Room type : Guest Room</div>
+                    Enjoy our elegant 40 m² guest rooms, designed in warm beige tones and tailored to the needs of
+                    private and business travelers alike. <br> All rooms have a large marble bathroom, a double bed, air
+                    conditioning, an additional work area with
+                    free internet access and a walk-in closet. Our superior rooms impress with a wonderful view of the
+                    city and the adjacent park. <br><br> Additional services: 24 hour room service Bathrobe, slippers
+                    Daily newspaper on request
+                    <br>
+                    <br> Welcome gifts: Fruit basket 1 bottle of mineral water Coffee and tea
+
+
+                </div>
+            </div>
+            <div class="roomspic2" id="room2"><img src="2.jpg">
+                <div class="rdesc" id="rdesc1">
+                    <div class="roomtype">Room type : One-Room Suite</div>
+                    This is a one-room suite with queen-size bed and comfortable seating area. It is located downstairs
+                    with an outside entrance and is wheelchair assessable. It has a 39-inch flat screen TV and electric
+                    fireplace. <br><br> The butler kitchen
+                    (refrigerator, microwave, Keurig coffee brewer are provided). Coffee, tea and amenities are
+                    supplied. The large bathroom has a 60-inch shower (no tub). Luxury hotels in the 1900s provided
+                    sample rooms for traveling salesmen to display
+                    their wares. <br><br> Remember transportation was either by train or horse & buggy.
+
+
+
+                </div>
+            </div>
+            <div id="room3" class="roomspic1"><img src="3.jpg">
+                <div class="rdesc">
+                    <div class="roomtype">Room type : Large Deluxe Suite</div>
+                    Our Large Deluxe Suite also provides views over landscaped gardens. It has a seating area, digital
+                    safe and mini fridge. This room can be configured with either 2 single beds or zip and linked to
+                    provide a large double bed. <br><br> As our smallest budget rooms, these Compact bedrooms are suited
+                    for single occupancy or short-stay double occupancy as they have limited space and storage. <br>
+                    <br> It has ample storage, a seating area, digital safe and mini fridge.
+
+
+                </div>
+            </div>
+            <div class="roomspic2" id="room4"><img src="4.jpg">
+                <div class="rdesc">
+                    <div class="roomtype">Room type : Standard Room</div>
+                    The Standard Room comprises of 1 Double Bed or 2 Twin Beds, 2 Bedside Tables, a Desk & Chair. The
+                    room is furnished with wall to wall carpeting, trendy furnishings and a balcony. <br><br> Our
+                    ultramodern glass bathroom is equipped with
+                    hairdryer, magnifying shaving and make up mirror as well as all the amenities you could possible
+                    need during your stay. <br><br> A Complimentary Bottle of Wine, Fresh Fruit and Mineral Water, are
+                    provided on arrival. Electric current:
+                    220 Volts. Smoking rooms & inter-connecting rooms are also available.
+
+
+                </div>
+                  
+            </div>
+            <div class="buton">
+                <a href="login.html"><button>Book A Stay Now</button></a>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- footer -->
+
+    <div class="foot">
+        <div class="lefrig">
+            <div class="leftfooter">
+                <div class="about">About Us</div>
+                <div class="abtintro">Our History</div>
+                <div class="aboutus">
+                    Everest Hotel is located in the heart of Bangalore. Spread across an expansive
+                    three acres of serene space, the hotel becomes the ideal destination for business
+                    and leisure travelers for its state-of-the-art facilities, fine dining venues,
+                    and dedicated services of the staff making the experience of every patron at
+                    Everest Hotel an unforgettable one.<br>
+                    We ensure to make your stay the most comfortable one. The hotel boasts of
+                    other lavish facilities like Roof Top heated Swimming Pool and 30,000 sq. ft.
+                    of green lawn which can accommodate 1000 people for weddings, any social events.
+                </div>
+
+
+            </div>
+            <div class="rightfooter">
+                <div class="about">Write to Us</div>
+                <div class="abtintro">Any questions or remarks?<br>Please fill the feedback form</div>
+
+
+                <div id="fform">
+                    <form>
+                        <div>Name :<input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                        </div>
+                        <div>Email :<input type="text" name="email" id="email" placeholder="Enter your Email" required>
+                        </div>
+                        <div>Phone :<input type="number" name="phone" id="phone" placeholder="Enter your Phone"
+                                required></div>
+                        <div>Issue : <textarea name="issue" id="issue" placeholder="Type your Issue here"></textarea>
+                        </div>
+                        <div>
+                            <button>Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottombar">
+            <div class="text">
+                © Copyright 2023 Everest Hotel. All Rights Reserved.
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

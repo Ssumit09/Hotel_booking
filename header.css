@@ -1,0 +1,41 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    /* font-style: italic; */
+  }
+
+  .div1 {
+    width: 100%;
+    background:rgb(216, 194, 194);
+    height: 44px;
+    /* border: 1px solid black; */
+  }
+
+  .p1 {
+    color: #4a4a4a;
+    text-decoration: solid;
+    font-weight: lighter;
+
+    font-size: 25px;
+    text-decoration: none;
+
+    float: right;
+    margin-right: 23px;
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+
+  div a {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    padding-top: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    float: right;
+    margin-right: 23px;
+  }
+
+  div a:hover {
+    color: red;
+    text-decoration: underline;
+  }

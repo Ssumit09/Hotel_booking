@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort booking form</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <div class="div1">
+      <a href="contact_us.html">Contact us</a>
+      <p class="p1">|</p>
+      <a href="Faq.html">FAQs</a>
+      <p class="p1">|</p>
+      <a href="Offer page.html">Offers</a>
+      <p class="p1">|</p>
+      <a href="indx _af_login.html">Home</a>
+    </div>
+
+
+    <div class="container">
+        <form class="form-group" action="https://sheetdb.io/api/v1/u442vyyt6g14m" method="post" id="sheetdb-form">
+            <div id="form">
+                <h1 class="text-white text-center" id="header">Booking Now</h1>
+
+                <div id="first-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="firstname" class="input" placeholder="First name" name="data[First_name]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="number" id="" class="input" placeholder="Phone number" name="data[Phone_number]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <label for="arival" style="color: white;">Check-in Date:</label>
+                        <input type="date" placeholder="29/20/2021" id="arrival-date" name="data[Arrival_date]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <select id="" class="input" style="background-color: #50554d" name="data[No.of_adults]" required>
+                            <option value="">Adults</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                        </select>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <select id="" class="input" style="background-color: #50554d" name="data[No.of_children]" >
+                            <option value="">Children</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div id="second-group">
+
+                    <div id="content">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" id="lastname" class="input" placeholder="Last name" name="data[Last_name]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <input type="email" id="" class="input" placeholder="Email" name="data[Email]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <label for="DEPARTURE" style="color: white;">Check-out Date :</label>
+                        <input type="date" placeholder="29/20/2021" id="departure-date" name="data[Departure_date]" required>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <select id="" class="input" style="background-color: #50554d;" name="data[Room_type]" required>
+                            <option value="">Room Type</option>
+                            <option value="">Guest Room</option>
+                            <option value="">One-Room Suite</option>
+                            <option value="">Large Deluxe Suite</option>
+                            <option value="">Standard Room</option>
+                        </select>
+                    </div>
+
+                    <div id="content">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <input type="text" class="input" placeholder="Enter Promocode" style="background-color: #50554d;">
+                    </div>
+
+                </div>
+
+                <div class="button-type">
+                    <button type="reset" value="Submit" id="reset-btn" class="button" onmouseover="mouseover1()" onmouseout="normal1()">Reset</button>
+                    <button value="Submit" id="submit-btn" onclick="" class="button" onmouseover="mouseover2()" onmouseout="normal2()">Confirm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function mouseover1(){
+            document.getElementById("reset-btn").style.background = "red";
+        }
+
+        function normal1(){
+            document.getElementById("reset-btn").style.background = "yellow";
+        }
+
+        function mouseover2(){
+            document.getElementById("submit-btn").style.background = "green";
+        }
+
+        function normal2(){
+            document.getElementById("submit-btn").style.background = "yellow";
+        }
+
+
+        var form = document.getElementById('sheetdb-form');
+
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            document.write("");
+        window.open("./payment_page.html", "_self");
+        });
+        });
+
+    </script>
+
+</body>
+</html>

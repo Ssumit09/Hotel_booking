@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>Signup</title>
+    <link rel="stylesheet" href="login_style.css" >
+
+    <script src="https://kit.fontawesome.com/220cf49541.js"></script>
+  </head>
+  <body>
+    <!-- action="https://sheetdb.io/api/v1/u442vyyt6g14m" method="post" id="sheetdb-form" -->
+    <form >
+      <div class="container">
+        <div class="login">
+          <h1>Signup</h1>
+          <div class="username">
+            <span>Name</span>
+            <div class="input-username">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="user" name="data[Name]" placeholder="Name" required>
+            </div>
+            <hr>
+          </div>
+          <div class="username">
+            <span>Email</span>
+            <div class="input-username">
+              <i class="fa fa-envelope"></i>
+              <input type="email" id="email" name="data[Email]" placeholder="Email" required>
+            </div>
+            <hr>
+          </div>
+
+          <div class="password">
+            <span>Password</span>
+            <div class="input-password">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" name="data[Password]"  placeholder="Password" required>
+              <h6>Minimum seven-character password starts with uppercase letter.</h6>
+            </div>
+          </div>
+
+          <span></span>
+          <div class="login-button">
+            <button onclick="store()" type="submit">Signup</button>
+          </div>
+          <div class="sign-up">
+            <p><span>Or Signup Using </span></p>
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google"></i>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script>
+
+    function store(){
+        var email = document.getElementById('email').value;
+        var pass = document.getElementById('password').value;
+        var name=document.getElementById('user').value;
+
+      var passw = /^[A-Za-z]\w{7,14}$/;
+        if ( email!= "" && pass.match(passw) && name.value != "" ) {
+           localStorage.setItem('Username', name);
+        localStorage.setItem('Email', email);
+        localStorage.setItem('Password', pass);
+
+        document.write("");
+        window.open("./login.html", "_self");}
+
+        else{
+            if( document.getElementById("password").value!=passw){
+                alert("Please enter a valid password");
+            }
+            else{
+              form.reset();
+            }
+        }
+ }
+
+
+    
+      
+      // var form = document.getElementById('sheetdb-form');
+
+      //   form.addEventListener("submit", e => {
+      //     e.preventDefault();
+      //     fetch(form.action, {
+      //         method : "POST",
+      //         body: new FormData(document.getElementById("sheetdb-form")),
+      //     }).then(
+      //         response => response.json()
+      //     ).then((html) => {
+      //       if (
+      //   document.getElementById("user").value != "" &&
+      //   document.getElementById("password").value.match(passw) &&
+      //   document.getElementById("email").value != ""
+      // ) {
+      //   document.write("");
+      //   window.open("./login.html", "_self");}
+
+      //   else{
+      //       if( document.getElementById("password").value!=passw){
+      //           alert("Please enter a valid password");
+      //       }
+      //   }
+      //   });
+      //   });
+
+
+      
+    
+  </script>
+</html>

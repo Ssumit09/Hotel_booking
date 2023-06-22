@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="header.css">
+    <script src="https://kit.fontawesome.com/220cf49541.js"></script>
+    <title>FAQ PAGE</title>
+    <style>
+      
+      .image {
+        background-image: url("lg_bg_faq.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        margin: 0px;
+        height: 90vh;
+      }
+
+      .title {
+        width: 1000px;
+        height: 50px;
+        /* border:1px solid black; */
+        text-align: center;
+        float: left;
+        margin-left: 380px;
+        margin-top: 190px;
+        font-size: 80px;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .heading {
+        padding: 20px 60px;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 50px;
+      }
+
+      .hr-line {
+        width: 60%;
+        margin: auto;
+      }
+
+      .qes {
+        padding: 30px 20px;
+        width: 60%;
+        margin: auto;
+      }
+
+      .answ {
+        margin: auto;
+        width: 50%;
+        padding: 0 18px;
+        display: none;
+        font-size: 20px;
+        /*For hiding the answer until clik event*/
+        overflow: hidden;
+      }
+
+      .active,
+      .qes:hover {
+        background-color: #f9f9f9;
+      }
+
+      .qes:after {
+        content: "\02795";
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2796";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1">
+      <a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      <p class="p1">|</p>
+      <a href="contact_us.html">Contact us</a>
+      <p class="p1">|</p>
+      <a href="Faq.html">FAQs</a>
+      <p class="p1">|</p>
+      <a href="booking.html">Booking</a>
+      <p class="p1">|</p>
+      <a href="Offer page.html">Offers</a>
+      <p class="p1">|</p>
+      <a href="indx _af_login.html">Home</a>
+    </div>
+
+    <div class="image">
+      <p class="title">HOW CAN WE HELP YOU?</p>
+    </div>
+
+    <main>
+      <h1 class="heading">FAQ'S</h1>
+      <section>
+        <div>
+          <h1 class="qes">What are the check-in and check-out times?</h1>
+          <div class="answ">
+            <p>Our check-in time is 3:00 PM, and check-out is at 11:00 AM.</p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+
+        <div>
+          <h1 class="qes">Do you provide airport transportation?</h1>
+          <div class="answ">
+            <p>
+              Yes, we offer airport transportation services for our guests.
+              Please contact our front desk to arrange for pick-up.
+            </p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+
+        <div>
+          <h1 class="qes">Can I make a hotel booking over the phone?</h1>
+          <div class="answ">
+            <p>
+              Yes. Simply give us a call on 022 4164 2214 (Monday to Sunday from
+              09:00 am till 07:00 pm).
+            </p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+
+        <div>
+          <h1 class="qes">How do I know if my hotel booking was successful?</h1>
+          <div class="answ">
+            <p>
+              After the payment process is completed, you will receive a
+              confirmation email.
+            </p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+
+        <div>
+          <h1 class="qes">Is breakfast included in the room rate?</h1>
+          <div class="answ">
+            <p>Yes, we offer complimentary breakfast for all our guests.</p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+
+        <div>
+          <h1 class="qes">Can I request a late check-out?</h1>
+          <div class="answ">
+            <p>
+              Late check-out requests are subject to availability. Please check
+              with the front desk on the day of your departure.
+            </p>
+          </div>
+        </div>
+        <hr class="hr-line" />
+        <br /><br />
+        <hr class="hr-line" />
+      </section>
+    </main>
+  </body>
+
+  <script>
+    var faq = document.getElementsByClassName("qes");
+    var i;
+
+    for (i = 0; i < faq.length; i++) {
+      faq[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        //this keyword references the object that is executing the current function
+
+        var body = this.nextElementSibling; //return the next element i.e. answ
+        if (body.style.display == "block") {
+          //since the answ class has display:none; so when user click on the + block the condition false and move to else part
+          body.style.display = "none"; //when user click on - block the condition true and change the display to none;
+        } else {
+          body.style.display = "block";
+        }
+      });
+    }
+
+    var getname=localStorage.getItem('Username');
+document.getElementById('profile').innerHTML=getname;
+
+  </script>
+</html>

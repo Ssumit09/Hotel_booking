@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login_style.css">
+    <script
+      src="https://kit.fontawesome.com/220cf49541.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <div class="login">
+          <h1>Login</h1>
+          <div class="username">
+            <span>Username</span>
+            <div class="input-username">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="user" placeholder="Username" required>
+            </div>
+            <hr />
+          </div>
+          <div class="password">
+            <span>Password</span>
+            <div class="input-password">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="pass" placeholder="Password" required>
+            </div>
+          </div>
+
+          <span></span>
+          <div class="login-button">
+            <button onclick="valid()" type="submit">Login</button>
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <div class="sign-up">
+            <span>Create a new account</span>
+            <a href="signup.html">SIGN UP</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script>
+function valid(){
+      var pass = document.getElementById('pass').value;
+        var name=document.getElementById('user').value;
+
+        var getname=localStorage.getItem('Username');
+        var getpass=localStorage.getItem('Password');
+
+        if(name==getname){
+          if(pass==getpass){
+            alert("login successful");
+            document.write("");
+        window.open("./indx _af_login.html", "_self");
+          }
+          else{
+            alert("Wrong password");
+          }
+
+    }
+    else{
+      alert("invalid details");
+    }
+  }
+
+
+
+    // function valid() {
+    //   var passw = /^[A-Za-z]\w{7,14}$/;
+    //   if (
+    //     document.getElementById("user").value != "" &&
+    //     document.getElementById("pass").value.match(passw)
+    //   ) {
+    //     document.write("");
+    //     window.open("./indx _af_login.html", "_self");
+    //   } 
+    //   else{
+    //         if( document.getElementById("pass").value!=passw && document.getElementById("pass").value!=''){
+    //             alert("Please enter a valid password");
+    //         }
+    //     }
+    // }
+  </script>
+</html>

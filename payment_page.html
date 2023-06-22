@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaY.Payment.com</title>
+    <link rel="stylesheet" href="payment_page.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+</head>
+<body>
+    <!--Font Awesome CDN-->
+
+    <div class="container">
+        <div class="title">
+            <h3>Select your payment method</Select></h3>
+        </div>
+
+        <form action="">
+            <input type="radio" name="payment" id="visa"  onclick="payment_card()">
+            <input type="radio" name="payment" id="Patym" onclick="payment_data()">
+            <input type="radio" name="payment" id="paypal" onclick="payment_data()">
+            <input type="radio" name="payment" id="GPay" onclick="payment_data()">
+
+
+            <div class="category">
+
+                <label for="visa" class="visaMethod">
+                    <div class="imgName">
+                        <div class="imgContainer visa">
+                            <img src="card.jpeg" alt="" >
+                        </div>
+                        <span class="name">VISA</span>
+                    </div>
+                </label>
+
+                <label for="Patym" class="PatymMethod">
+                    <div class="imgName">
+                        <div class="imgContainer Patym">
+                            <img src="paytmlogo.png" alt="">
+                        </div>
+                        <span class="name">Patym</span>
+                    </div>
+                </label>
+
+                <label for="paypal" class="paypalMethod">
+                    <div class="imgName">
+                        <div class="imgContainer paypal">
+                            <img src="PayPal.png" alt="">
+                        </div>
+                        <span class="name">Paypal</span>
+                    </div>
+                </label>
+
+                <label for="GPay" class="PayPalMethod">
+                    <div class="imgName">
+                        <div class="imgContainer GPay">
+                            <img src="gpay.jpeg" alt="">
+                        </div>
+                        <span class="name">GPay</span>
+                    </div>
+                </label>
+            </div>
+            <div id="output">
+                <p id="payment-data1"></p>
+                <p id="payment-data2"></p>
+                <p id="payment-data3"></p>
+                <p id="payment-data4"></p>
+            </div>
+            <div id="button">
+                <button type="submit" onclick="sweet_alert()">Pay</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function payment_card(){
+            var name = prompt("Enter your name");
+            var email = prompt("Confirm your mail");
+            card();
+            var room_type = prompt("Enter your room type -> { AC , NON-AC , SINGLE-BED , DOUBLE-BED }");
+            if(room_type == 'AC'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 100000;
+            }
+            else if(room_type == 'NON-AC'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 75000;
+            }
+            else if(room_type == 'SINGLE-BED'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 85000;
+            }
+            else if(room_type == 'DOUBLE-BED'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 1250000;
+            }
+
+            document.getElementById('payment-data1').innerHTML = 'Name : '+ name;
+
+            document.getElementById('payment-data3').innerHTML = 'Email : '+ email;
+        }
+
+        function card(){
+            var card_number = prompt("Enter your 16-digit card number");
+            if(card_number.length != 16){
+                    alert('Please enter valid 16-digit card number');
+                    card();
+            }
+            else{
+                document.getElementById('payment-data2').innerHTML = 'Card Number : '+ card_number;
+            }
+        }
+
+        function payment_data(){
+            var UPI_id = prompt("Enter your UPI-id");
+            var name = prompt("Enter your name");
+            var email = prompt("Confirm your mail");
+            var room_type = prompt("Enter your room type -> { AC , NON-AC , SINGLE-BED , DOUBLE-BED }");
+            if(room_type == 'AC'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 100000;
+            }
+            else if(room_type == 'NON-AC'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 75000;
+            }
+            else if(room_type == 'SINGLE-BED'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 85000;
+            }
+            else if(room_type == 'DOUBLE-BED'){
+                document.getElementById('payment-data4').innerHTML = 'Amount : Rs '+ 1250000;
+            }
+            document.getElementById('payment-data1').innerHTML = 'Name : '+ name;
+            document.getElementById('payment-data2').innerHTML = 'UPI-id : '+ UPI_id;
+            document.getElementById('payment-data3').innerHTML = 'Email : '+ email;
+        }
+
+        function sweet_alert()
+        {
+           var data1 = document.getElementById('payment-data1').innerHTML;
+           var data2 = document.getElementById('payment-data2').innerHTML;
+           var data3 = document.getElementById('payment-data3').innerHTML;
+        //    alert(data.length);
+        //    alert(data);
+           if(data1.length > 7 && data2.length > 9 && data3.length > 8 ){
+            alert('                                           Congratulation!\n                                  Your room has been booked',);
+            document.write("");
+            window.open("./indx _af_login.html", "_self");
+           }
+           else{
+            alert('Please provide ALL the details');
+           }
+        }
+    </script>
+</body>
+</html>
