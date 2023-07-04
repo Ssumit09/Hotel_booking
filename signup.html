@@ -35,7 +35,7 @@
             <div class="input-password">
               <i class="fa-solid fa-lock"></i>
               <input type="password" id="password" name="data[Password]"  placeholder="Password" required>
-              <h6>Minimum seven-character password starts with uppercase letter.</h6>
+              <h6>Minimum six-character password and atleast one special character.</h6>
             </div>
           </div>
 
@@ -62,7 +62,7 @@
         var pass = document.getElementById('password').value;
         var name=document.getElementById('user').value;
 
-      var passw = /^[A-Za-z]\w{7,14}$/;
+      var passw = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
         if ( email!= "" && pass.match(passw) && name.value != "" ) {
            localStorage.setItem('Username', name);
         localStorage.setItem('Email', email);
